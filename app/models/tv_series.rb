@@ -2,6 +2,10 @@ class TvSeries < ApplicationRecord
   self.per_page = 10
   has_many :reviews
 
+  validates :name, presence: true
+  validates :gener, presence: true
+  validates :actor, presence: true
+  validates :director, presence: true
 
   def self.parse_csv_data(csv)
     csv.each do |row|
