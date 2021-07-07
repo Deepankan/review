@@ -1,0 +1,5 @@
+
+$('#results').html("<%= j render partial: 'tv_series/results', locals: { tv_series: @tv_series } %>")
+
+$('.modal-backdrop').removeClass('modal-backdrop')
+$('#exampleModal').removeClass('in').addClass('out')

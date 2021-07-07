@@ -1,0 +1,12 @@
+class CreateReviews < ActiveRecord::Migration[5.1]
+  def change
+    create_table :reviews do |t|
+      t.references :tv_series
+      t.references :user
+      t.decimal  :star
+      t.string :review
+
+      t.timestamps
+    end
+  end
+end
